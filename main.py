@@ -1,4 +1,3 @@
-from logging import debug
 from flask import Flask, app
 from settings import PORT, DEBUG
 from views import Views
@@ -10,4 +9,5 @@ app.route('/verify/<token>', methods=['POST'])(Views.verify)
 app.route('/generate')(Views.generate)
 app.route('/captcha/<token>')(Views.captcha)
 
-app.run(port=PORT, debug=DEBUG)
+if __name__ == '__main__':
+    app.run(port=PORT, debug=DEBUG)

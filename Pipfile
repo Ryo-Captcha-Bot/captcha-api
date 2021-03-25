@@ -9,6 +9,7 @@ PyJWT = "*"
 captcha = "*"
 Flask = "*"
 flask = "*"
+gunicorn = "*"
 
 [dev-packages]
 autopep8 = "*"
