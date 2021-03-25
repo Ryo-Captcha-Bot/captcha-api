@@ -10,4 +10,5 @@ app.route('/verify/<token>', methods=['POST'])(Views.verify)
 app.route('/generate')(Views.generate)
 app.route('/captcha/<token>')(Views.captcha)
 
-app.run(port=PORT, debug=DEBUG)
+if DEBUG:
+    app.run(port=PORT, debug=DEBUG)
